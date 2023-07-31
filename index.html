@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="dashboard.js"></script>
+    
+</head> 
+<style>
+    body {
+        margin-top: 40px;
+        padding: 0 30px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Efek hover untuk grafik */
+    #chart1:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+ 
+    /* Animasi fade-in untuk grafik */
+    .card-body {
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* Animasi judul navbar */
+    .navbar-brand {
+        animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+
+    /* Tampilan kartu grafik */
+    .card {
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-header {
+        background-color: #343a40;
+        color: #fff;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 0px;
+    }
+
+    /* Tampilan grafik */
+    #chart1 {
+        width: 100%;
+        height: 500px;
+    }
+
+    /* Tampilan navbar */
+    .navbar {
+        background-color: #343a40;
+    }
+
+    .navbar-brand {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">
+            <i class="fas fa-chart-line"></i> DATA JUMLAH KEMATIAN
+    </nav>    
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Grafik 1</div>
+                    <div class="card-body">
+                        <div id="chart1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak elemen div untuk grafik lainnya -->
+        </div>
+    </div>
+</body>
+</html>
+
